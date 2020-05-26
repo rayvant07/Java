@@ -1,0 +1,46 @@
+package Palindrome;
+import java.io.*;
+import java.util.*;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+	  
+		        
+		        Scanner sc=new Scanner(System.in);
+		        System.out.println("Enter the string to check for Palindrome ");
+		        String A=sc.next();
+		        int n=A.length();
+		        char[] array=new char[n];
+		        String lower=A.toLowerCase();
+		        array=lower.toCharArray();
+		        int flag=0;
+		        for(char i=0;i<=n/2;i++)
+		        {
+		         if(array[i]==array[n-1])
+		            {
+		             n--;
+		             flag=1;
+		            }
+		            else
+		            {
+		             flag=0;
+		             break;
+		            }
+		        }
+		     if(flag==1)
+		        {
+		            System.out.println("Yes it's a Palindrome Sequence");
+		        }
+		     if(flag==0)
+		        {
+		            System.out.println("No it's not a Plaindrome Sequence");
+		        }
+		      
+		               
+		    }
+		        
+		    
+		}
+
+
